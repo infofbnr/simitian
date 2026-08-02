@@ -1,0 +1,134 @@
+* {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 40px;
+    user-select: none;
+}
+body {
+    margin: 0;
+    background-color: rgb(176, 230, 240);
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 30px;
+    padding: 20px 40px;
+    background-color: rgb(213, 231, 234);
+    border-radius: 30px;
+}
+
+.siki {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+}
+.introduction {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    gap: 30px;
+}
+a {
+    text-decoration: none;
+}
+.kakger {
+    color: black;
+}
+#active-page {
+    color: rgb(247, 33, 0);
+}
+.main-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(126, 207, 239);
+    border-radius: 30px;
+    margin-left: 300px;
+    margin-right: 300px;
+    margin-top: 50px;
+}
+
+.main-div img {
+    width: 400px;
+    height: 250px;
+    border-radius: 20px;
+
+}
+
+.main-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+#balls-1   {
+    display: none;
+}
+#balls-1.show {
+    display:block;
+}
+#balls-2  {
+    display: none;
+}
+#balls-2.show {
+    display:block;
+}
+#balls-3   {
+    display: none;
+}
+#balls-3.show {
+    display:block;
+}
+#balls-4   {
+    display: none;
+}
+#balls-4.show {
+    display:block;
+}
+#balls-5   {
+    display: none;
+}
+#balls-5.show {
+    display:block;
+}
+.butt {
+    border-radius: 10px;
+    border: 2px solid rgb(111, 164, 213);
+    background-color: rgb(111, 164, 213);
+    font-size: 30px;
+    user-select: none;
+}
+
+/* Center the text and format the profile container */
+.nigger {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    padding-bottom: 20px;
+}
+
+/* Ensure the quote/text underneath uses proper margins */
+.nigger p {
+    margin: 15px 0 0 0;
+    width: 100%;
+}
+
+/* Updated image styles to prevent distortion */
+.main-div img {
+    width: 400px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 20px;
+}
