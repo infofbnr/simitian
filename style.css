@@ -90,10 +90,10 @@ a {
     cursor: pointer;
 }
 
-#balls-1, #balls-2, #balls-3, #balls-4, #balls-5 {
+#balls-1, #balls-2, #balls-3, #balls-4, #balls-5, #balls-6 {
     display: none;
 }
-#balls-1.show, #balls-2.show, #balls-3.show, #balls-4.show, #balls-5.show {
+#balls-1.show, #balls-2.show, #balls-3.show, #balls-4.show, #balls-5.show, #balls-6.show {
     display: flex;
 }
 
