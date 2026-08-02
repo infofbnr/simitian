@@ -98,6 +98,7 @@ a {
 }
 
 .nigger {
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -112,7 +113,7 @@ a {
     border-radius: 20px;
 }
 .nigger p {
-    font-size: 24px;
+    font-size: 32px;
     margin-top: 15px;
 }
 
@@ -154,6 +155,6 @@ a {
         height: auto;
     }
     .nigger p {
-        font-size: 18px;
+        font-size: 30px;
     }
 }
