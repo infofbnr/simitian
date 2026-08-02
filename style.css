@@ -2,6 +2,7 @@
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 40px;
     user-select: none;
+    box-sizing: border-box; /* Prevents padding from breaking layouts */
 }
 body {
     margin: 0;
@@ -22,12 +23,14 @@ body {
     align-items: center;
     justify-content: center;
     padding: 50px;
+    text-align: center; /* Centers description text on small screens */
 }
 .introduction {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    text-align: center;
 }
 ul {
     list-style: none;
@@ -35,6 +38,7 @@ ul {
     justify-content: space-around;
     align-content: center;
     gap: 30px;
+    padding: 0;
 }
 a {
     text-decoration: none;
@@ -55,13 +59,14 @@ a {
     margin-left: 300px;
     margin-right: 300px;
     margin-top: 50px;
+    padding: 20px;
 }
 
 .main-div img {
     width: 400px;
     height: 250px;
+    object-fit: cover;
     border-radius: 20px;
-
 }
 
 .main-button {
@@ -70,42 +75,30 @@ a {
     justify-content: center;
     gap: 40px;
 }
-#balls-1   {
-    display: none;
+.main-button h1 {
+    text-align: center;
+    word-break: break-word; /* Forces long names to wrap */
+    font-size: clamp(20px, 5vw, 36px); /* Dynamic size: shrinks on small screens */
 }
-#balls-1.show {
-    display:block;
-}
-#balls-2  {
-    display: none;
-}
-#balls-2.show {
-    display:block;
-}
-#balls-3   {
-    display: none;
-}
-#balls-3.show {
-    display:block;
-}
-#balls-4   {
-    display: none;
-}
-#balls-4.show {
-    display:block;
-}
-#balls-5   {
-    display: none;
-}
-#balls-5.show {
-    display:block;
-}
+
+#balls-1   { display: none; }
+#balls-1.show { display: flex; } /* Changed to flex to honor alignment */
+#balls-2  { display: none; }
+#balls-2.show { display: flex; }
+#balls-3   { display: none; }
+#balls-3.show { display: flex; }
+#balls-4   { display: none; }
+#balls-4.show { display: flex; }
+#balls-5   { display: none; }
+#balls-5.show { display: flex; }
+
 .butt {
     border-radius: 10px;
     border: 2px solid rgb(111, 164, 213);
     background-color: rgb(111, 164, 213);
     font-size: 30px;
     user-select: none;
+    cursor: pointer;
 }
 
 /* Center the text and format the profile container */
@@ -125,10 +118,38 @@ a {
     width: 100%;
 }
 
-/* Updated image styles to prevent distortion */
-.main-div img {
-    width: 400px;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 20px;
+/* ==========================================================================
+   MOBILE RESPONSIVE STYLES (Targets screens smaller than 768px wide)
+   ========================================================================== */
+@media (max-width: 768px) {
+    * {
+        font-size: 28px; /* Shrinks large global font size so it fits screens */
+    }
+    .navbar {
+        flex-direction: column; /* Stacks title and navigation items */
+        gap: 15px;
+        padding: 15px;
+        font-size: 22px;
+    }
+    ul {
+        gap: 20px;
+    }
+    .main-div {
+        margin-left: 20px; /* Removes giant 300px side margins */
+        margin-right: 20px;
+        margin-top: 30px;
+    }
+    .main-div img {
+        width: 90%; /* Scales image fluidly inside the card container */
+        height: auto; /* Keeps correct photographic aspect ratio */
+        max-width: 400px;
+    }
+    .main-button {
+        gap: 15px;
+        width: 100%;
+        padding: 0 10px;
+    }
+    .main-button h1 {
+        font-size: 28px;
+    }
 }
