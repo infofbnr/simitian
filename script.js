@@ -1,5 +1,5 @@
 // Loop through all 5 members using their numbered IDs
-for (let i = 1; i <= 5; i++) {
+for (let i = 1; i <= 6; i++) {
     const toggleButton = document.getElementById(`edward-${i}`);
     const menuContainer = document.getElementById(`balls-${i}`);
 
