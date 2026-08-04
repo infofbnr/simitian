@@ -1,7 +1,7 @@
 const far = `
         <div class="introduction">
             <h1 class="introduction">What is Simitian?</h1>
-            <p class="siki">The Simitian Buildings are a group of buildings located on the same site that are designed to work together as a single unit located in Antelias.</p>
+            <p class="siki">A residential compound consisting of multiple adjacent buildings, protected by an ELITE feline security force. Official headquarters of the friend group.</p>
         </div>
         <div>
             <h1 class="introduction">Introducing the Gang</h1>
