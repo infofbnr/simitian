@@ -90,10 +90,10 @@ a {
     cursor: pointer;
 }
 
-#balls-1, #balls-2, #balls-3, #balls-4, #balls-5, #balls-6 {
+#balls-1, #balls-2, #balls-3, #balls-4, #balls-5, #balls-6, #balls-7, #balls-8 {
     display: none;
 }
-#balls-1.show, #balls-2.show, #balls-3.show, #balls-4.show, #balls-5.show, #balls-6.show {
+#balls-1.show, #balls-2.show, #balls-3.show, #balls-4.show, #balls-5.show, #balls-6.show, #balls-7.show, #balls-8.show {
     display: flex;
 }
 
@@ -116,7 +116,22 @@ a {
     font-size: 32px;
     margin-top: 15px;
 }
+.niggers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;    /* Centers the text horizontally */
+    justify-content: center;
+    padding: 20px;          /* Optional: Replaces the 500px push with balanced padding */
+    text-align: center;     /* Optional: Centers text inside the divs */
+}
 
+.siktir {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+}
 /* ==========================================================================
    MOBILE RESPONSIVE STYLES 
    ========================================================================== */
