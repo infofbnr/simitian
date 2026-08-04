@@ -1,20 +1,7 @@
-// Loop through all 5 members using their numbered IDs
-for (let i = 1; i <= 8; i++) {
-    const toggleButton = document.getElementById(`edward-${i}`);
-    const menuContainer = document.getElementById(`balls-${i}`);
-
-    // Ensure both elements exist before adding the click event
-    if (toggleButton && menuContainer) {
-        toggleButton.addEventListener('click', function() {
-            menuContainer.classList.toggle('show');
-        });
-    }
-}
 const far = `
         <div class="introduction">
             <h1 class="introduction">What is Simitian?</h1>
             <p class="siki">The Simitian Buildings are a group of buildings located on the same site that are designed to work together as a single unit located in Antelias.</p>
-
         </div>
         <div>
             <h1 class="introduction">Introducing the Gang</h1>
@@ -108,15 +95,19 @@ const far = `
                 </div>
             </div>
         </div>
-`
+`;
+
 const texx = `
+            <h1 class="introduction">Rules</h1>
+            <br>
+            <div class="niggers" id="falan">
                 <div>
                     <h2>Rule 1:</h2>
                     <h3>Respect kilis' house at all time.</h3>
                 </div>
                 <div>
                     <h2>Rule 2:</h2>
-                    <h3>Never leave before 4 AM.</h3>
+                    <h3>Always say "aatik el aafie" to the officers at the entrance of the building.</h3>
                 </div>
                 <div>
                     <h2>Rule 3:</h2>
@@ -130,14 +121,44 @@ const texx = `
                     <h2>Rule 5:</h2>
                     <h3>Like each other posts.</h3>
                 </div>
-`
-const tt = document.getElementById("falan")
-bat.addEventListener("click",function() {
-    if(tt.innerHTML === texx) {
-        tt.innerHTML = far
-    }
-    else {
-        tt.innerHTML = texx
-    }
-})
+            </div>
+`;
 
+// Trim whitespaces to prevent innerHTML string matching glitches
+const cleanTexx = texx.trim();
+const cleanFar = far.trim();
+
+var tt = document.getElementById("atr");
+const bat = document.getElementById("kakgerr");
+
+// Handle page switching and button text swap
+bat.addEventListener("click", function() {
+    if (tt.innerHTML.trim() === cleanTexx) {
+        tt.innerHTML = cleanFar;
+        bat.textContent = "Back"; // Updates button text dynamically
+    } else {
+        tt.innerHTML = cleanTexx;
+        bat.textContent = "Next";
+    }
+});
+
+// Event Delegation: Watches for clicks on the entire document
+document.addEventListener('click', function(event) {
+    // Check if the clicked item is a profile dropdown button
+    if (event.target && event.target.classList.contains('butt')) {
+        // Extract the unique number ID from edward-X
+        const idNumber = event.target.id.replace('edward-', '');
+        const menuContainer = document.getElementById(`balls-${idNumber}`);
+        
+        if (menuContainer) {
+            menuContainer.classList.toggle('show');
+            
+            // Optional: Rotates arrow icon when open
+            if (menuContainer.classList.contains('show')) {
+                event.target.textContent = "▲";
+            } else {
+                event.target.textContent = "▼";
+            }
+        }
+    }
+});

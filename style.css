@@ -132,6 +132,23 @@ a {
     flex-direction: column;
     gap: 30px;
 }
+.asang {
+  display: flex;
+  justify-content: flex-end; 
+  max-width: 800px; /* Matches your siki text width limit for perfect alignment */
+  margin: 0 auto;   /* Centers the button container area on wide screens */
+  padding-right: 20px; /* Tweaks exactly how far from the right edge it sits */
+}
+
+
+.lolig {
+  width: 100px;
+  height: 70px;
+  border-radius: 15px;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
 /* ==========================================================================
    MOBILE RESPONSIVE STYLES 
    ========================================================================== */
